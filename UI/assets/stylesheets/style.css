@@ -225,3 +225,68 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+/* 
+======================
+    Admin User Pages  
+======================
+*/
+
+/* CreateGovtOffice */
+#create-office {
+  background: #ed533b;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#create-office h2 {
+  margin-top: 100px; 
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+}
+#create-office form {
+  width: 40%;
+  margin: 0 auto;
+}
+#create-office form .form-header {
+  background-color: #112f41;
+  height: 70px;
+}
+.form-header h3 {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+}
+form .input-container {
+  background: #fff;
+  color: #112f41;
+  padding: 20px 10px;
+}
+form .field {
+  padding: 10px 0;
+  text-align: left;
+}
+form .fa {
+  font-size: 20px;
+}
+form .parties {
+  width: 90%;
+  background: #f4f4f4;
+  color: #112f41;
+  padding: 7px 0;
+}
+#create-office button {
+  color: #fff;
+  vertical-align: baseline;
+  padding: 12px 20px;
+  background-color: #112f41;
+  width: 100%;
+  font-weight: 700;
+  margin-top: 15px; 
+}
+
+/* Footer */
+#create {
+  background-color: #112f41;
+}
