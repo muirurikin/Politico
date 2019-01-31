@@ -36,42 +36,27 @@
     </div>
   </header>
   <main>
-    <section id="create-office">
+    <section id="create-party">
       <div class="container">
-        <h2>Welcome! Please fill the form below to create a new Government Office</h2>
-        <form action="">
+        <h2>Welcome! Please Fill In Party Details Below</h2>
+        <form>
           <div class="form-header">
-            <h3>Create New Office</h3>
+            <h3>Create Party</h3>
           </div>
-          <div class="input-container">
-            <div class="field">
-              <label for="Office">Office Name</label>
-              <div>
-                <i class="fa fa-building"></i>
-                <select name="Officename" class="parties">
-                  <option value="none">Choose Office Name</option>
-                  <option value="governor">Governor</option>
-                  <option value="senator">Senator</option>
-                  <option value="mp">Member Of Parliament</option>
-                  <option value="mca">Member Of County Assembly </option>
-                  <option value="womanrep">Women Rep </option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <label for="politicalparty">Political Party</label>
-              <div>
-                <i class="fa fa-home"></i>
-                <select name="politicalparty" class="parties">
-                  <option value="none">Choose Party</option>
-                  <option value="kanu">Kanu</option>
-                  <option value="odm">O.D.M</option>
-                  <option value="pnu">P.N.U</option>
-                  <option value="narc">Narc</option>
-                </select>
-              </div>
-            </div>
-            <button>Create Office</button>
+          <div>
+            <input type="text" name="partyname" placeholder="Party Name">
+          </div>
+          <div>
+            <input type="text" name="partyleader" placeholder="Party Leader">
+          </div>
+          <div>
+            <input type="text" name="mantra" placeholder="Party Mantra">
+          </div>
+          <div>
+            <input type="file" name="partyimage">              
+          </div>
+          <div>
+            <button>Create Party</button>
           </div>
         </form>
       </div>
