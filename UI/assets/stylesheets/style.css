@@ -45,7 +45,6 @@ header a {
 header li {
   padding: 0 10px;
   display: inline;
-  float: left;
 }
 header nav {
   float: right;
@@ -363,4 +362,57 @@ input[type=submit] {
 */
 #runners .container {
   margin-bottom: 20px; 
+}
+
+/* 
+===========
+  Profile  
+===========
+*/
+/* Profile Card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 4px;
+  background: url('../img/bg-wood.jpeg'), no-repeat;
+  color: #fff;
+  height: 300px;
+}
+
+.card img {
+  height: 200px;
+  border-radius: 50%;
+  float: left;
+  border: 2px solid#fff;
+  margin-left: 10px;
+
+}
+
+.user-details {
+  float: right;
+  width: 56%;
+  margin-right: 10px;
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 0;
+  border-bottom: 2px solid #f4f4f4;
+}
+/* Voted For */
+.sm-card {
+  float: left;
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+}
+.sm-card img {
+  width: 200px;
+  height: 200px;
+}
+.sm-card .title {
+  color: #112f41;
+  font-size: 14px;
 }
