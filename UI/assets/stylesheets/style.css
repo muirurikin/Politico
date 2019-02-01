@@ -300,42 +300,60 @@ form .parties {
 ==========================
 */
 #create-party {
-  background: #4fb99f;
-  text-align: center;
-  padding-bottom: 30px;
+  background: #fff;
+  padding-bottom: 20px;
+  color: #112f41;
 }
 #create-party h2 {
   margin-top: 100px; 
-  color: #fff;
-  font-size: 40px;
-  font-weight: 300;
+  color: #112f41;
 }
 form {
   width: 40%;
   margin: 0 auto;
 }
-#create-party form .form-header {
-  background-color: #f2b134;
-  height: 70px;
-}
-#create-party .form-header h3 {
-  color: #fff;
-  margin: 0 auto;
-  font-size: 30px;
-  padding: 10px 0;
-  font-weight: 300;
-}
 form input {
   background-color: #fff;
-  width: 99%;
+  width: 100%;
   padding: 1em 0;
   overflow: hidden;
   margin: 0 auto;
 }
-form button {
-  background-color: #f2b134;
-  width: 100%;
+
+/* 
+========================
+  Edit Political Party  
+========================
+*/
+#edit-party {
+  background: #fff;
+  padding-bottom: 20px;
   color: #112f41;
-  padding: 1em;
-  color: #fff;
 }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #112f41;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  float: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

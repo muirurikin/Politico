@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Politico - Create GOvt Office</title>
+  <title>Politico - Create Political Party</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,300i,400" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../assets/stylesheets/style.css">
@@ -39,24 +39,33 @@
     <section id="create-party">
       <div class="container">
         <h2>Welcome! Please Fill In Party Details Below</h2>
-        <form>
-          <div class="form-header">
-            <h3>Create Party</h3>
+        <form action="">
+          <div class="row">
+            <div>
+              <label for="partyname">Party Name</label>
+              <input type="text" name="partyname" placeholder="Party Name">
+            </div>
           </div>
-          <div>
-            <input type="text" name="partyname" placeholder="Party Name">
+          <div class="row">
+            <div>
+              <label for="partyleader">Party Leader</label>
+              <input type="text" name="partyleader" placeholder="Party Leader">
+            </div>
           </div>
-          <div>
-            <input type="text" name="partyleader" placeholder="Party Leader">
+          <div class="row">
+            <div>
+              <label for="mantra">Party Mantra</label>
+              <input type="text" name="mantra" placeholder="Party Mantra">
+            </div>
           </div>
-          <div>
-            <input type="text" name="mantra" placeholder="Party Mantra">
+          <div class="row">
+            <div>
+              <label for="partyimg">Party Image</label>
+              <input type="file" name="partyimg">
+            </div>
           </div>
-          <div>
-            <input type="file" name="partyimage">              
-          </div>
-          <div>
-            <button>Create Party</button>
+          <div class="row">
+            <input type="submit" value="Submit">
           </div>
         </form>
       </div>
