@@ -519,3 +519,90 @@ input[type=submit] {
   text-align: center;
   padding: 10px;
 }
+
+/* 
+==============
+  Login Page 
+==============
+*/
+#login {
+  background-color: #4fb99f;
+  padding: 30px 0;
+  height: 75vh;
+  color: #fff;
+}
+#login form {
+  width: 40%;
+  margin: 0 auto;
+}
+#login form .form-header {
+  background-color: #f2b134;
+  height: 70px;
+}
+#login .form-header h3 {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 30px;
+  padding: 10px 0;
+  font-weight: 300;
+  text-align: center;
+}
+#login form div {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#login form input {
+  background-color: #fff;
+  padding: 1.2em;
+  overflow: hidden;
+  margin: 0 auto;
+  width: inherit;
+}
+#login form button {
+  background-color: #f2b134;
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 
+==============
+  Login Page 
+==============
+*/
+#register {
+  padding: 30px 0;
+}
+#register form .form-header {
+  background-color: #112f41;
+  height: 70px;
+}
+#register .form-header h3 {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 30px;
+  padding: 10px 0;
+  font-weight: 300;
+  text-align: center;
+}
+#register form div {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#register form input {
+  background-color: #fff;
+  padding: 1em;
+  margin: 0 auto;
+  width: inherit;
+}
+#register form button {
+  background-color: #112f41;
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
