@@ -19,7 +19,7 @@
         </div>
         <nav>
           <ul>
-            <div id="dropdown">
+            <div class="dropdown">
               <button class="btn-drop">
                 Admin <i class="fa fa-caret-down"></i>
               </button>
@@ -30,7 +30,17 @@
                 <a href="Admin/deleteParty.html">Delete Party</a>
               </div>
             </div>
-            <li><a href="profile.html">Profile</a></li>
+            <div class="dropdown">
+              <button class="btn-drop">
+                Profile <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-links">
+                <a href="profile.html">Profile</a>
+                <a href="Profile/viewParties.html">All Parties</a>
+                <a href="Profile/viewRunning.html">Running Candidates</a>
+                <a href="Profile/vote.html">Vote</a>
+              </div>
+            </div>
             <li><a href="register.html">Sign-Up</a></li>
             <li><a href="login.html">Sign-In</a></li>
           </ul>
