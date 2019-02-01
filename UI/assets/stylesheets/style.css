@@ -227,7 +227,7 @@ footer {
 
 /* 
 ======================
-    Admin User Pages  
+  Admin User Pages  
 ======================
 */
 
@@ -353,6 +353,28 @@ input[type=submit] {
   content: "";
   display: table;
   clear: both;
+}
+
+/* 
+==================
+  Delete A Party  
+==================
+*/
+#delete-party {
+  background: #fff;
+  padding-bottom: 20px;
+  color: #112f41;
+}
+#delete-party .container {
+  margin-bottom: 20px;
+}
+#delete-party h2 {
+  margin-top: 100px; 
+  color: #ed533b;
+}
+#delete-party input[type=submit] {
+  background-color: #ed533b;
+  color: #fff;
 }
 
 /* 
