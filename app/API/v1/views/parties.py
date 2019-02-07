@@ -36,6 +36,16 @@ def get_party(party_id):
     else:
       return None
 
+@v1.route('/party/<int:party_id>', methods=['PUT'])
+def edit_party(party_id):
+  party_info = [party for party in parties if party['id'] == party_id]
+  party_info[0]['name'] = request.json['name']
+  party_info[0]['address'] = request.json['address']
+  party_info[0]['logo'] = request.json['logo']
+
+  return make_response(jsonify(party_info[0]))
+  
+
 @v1.route('/party/<int:party_id>', methods=['DELETE'])
 def remove_party(party_id):
   delete_party = [party for party in parties if party['id'] == party_id]
