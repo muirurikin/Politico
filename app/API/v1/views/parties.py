@@ -35,3 +35,13 @@ def get_party(party_id):
       return make_response(jsonify(party))
     else:
       return None
+
+@v1.route('/party/<int:party_id>', methods=['DELETE'])
+def remove_party(party_id):
+  delete_party = [party for party in parties if party['id'] == party_id]
+  parties.remove(delete_party[0])
+  return make_response(jsonify({
+    "Meassage": "Party deleted",
+    "Status": "ok"
+  }), 200)
+      
