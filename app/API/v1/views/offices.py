@@ -24,3 +24,8 @@ def office_func():
     }), 201)
   else:
     return Office.get_offices()
+
+@v1.route('/office/<int:office_id>', methods=['GET'])
+def get_office(office_id):
+  office1 = [office for office in offices if office['id'] == office_id]
+  return make_response(jsonify(office1[0]))
