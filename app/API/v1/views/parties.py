@@ -2,6 +2,7 @@ from flask import jsonify, make_response, request
 from app.API.v1 import v1
 from app.API.v1.models.parties import Party, parties
 
+# Handle GET POST to /parties
 @v1.route('/parties', methods=['GET', 'POST'])
 def party_func():
   if request.method == 'POST':
@@ -27,7 +28,8 @@ def party_func():
   else:
     return Party.get_parties()
 
-@v1.route('/party/<int:party_id>', methods=['GET', 'PUT', 'DELETE'])
+# Handle GET PUT DELETE to /parties/party_id
+@v1.route('/parties/<int:party_id>', methods=['GET', 'PUT', 'DELETE'])
 def party_func_id(party_id):
   if request.method == 'PUT':
     party_info = [party for party in parties if party['id'] == party_id]
