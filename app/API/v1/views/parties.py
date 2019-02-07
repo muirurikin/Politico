@@ -29,25 +29,21 @@ def party_func():
 
 @v1.route('/party/<int:party_id>', methods=['GET', 'PUT', 'DELETE'])
 def party_func_id(party_id):
-  party1 = [party for party in parties if party['id'] == party_id]
-  return make_response(jsonify(party1[0]))
+  if request.method == 'PUT':
+    party_info = [party for party in parties if party['id'] == party_id]
+    party_info[0]['name'] = request.json['name']
+    party_info[0]['address'] = request.json['address']
+    party_info[0]['logo'] = request.json['logo']
 
-@v1.route('/party/<int:party_id>', methods=['PUT'])
-def edit_party(party_id):
-  party_info = [party for party in parties if party['id'] == party_id]
-  party_info[0]['name'] = request.json['name']
-  party_info[0]['address'] = request.json['address']
-  party_info[0]['logo'] = request.json['logo']
-
-  return make_response(jsonify(party_info[0]))
-  
-
-@v1.route('/party/<int:party_id>', methods=['DELETE'])
-def remove_party(party_id):
-  delete_party = [party for party in parties if party['id'] == party_id]
-  parties.remove(delete_party[0])
-  return make_response(jsonify({
-    "Meassage": "Party deleted",
-    "Status": "ok"
-  }), 200)
+    return make_response(jsonify(party_info[0]))
+  elif request.method == 'DELETE':
+    delete_party = [party for party in parties if party['id'] == party_id]
+    parties.remove(delete_party[0])
+    return make_response(jsonify({
+      "Meassage": "Party deleted",
+      "Status": "ok"
+    }), 200)
+  else:
+    party1 = [party for party in parties if party['id'] == party_id]
+    return make_response(jsonify(party1[0]))
       
