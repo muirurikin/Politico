@@ -7,12 +7,11 @@ from app.API.v1.models.offices import Office, offices
 def office_func():
   if request.method == 'POST':
     office_data = request.get_json()
-    office_id = office_data['id']
     office_name = office_data['name']
     office_type = office_data['type']
 
     new_office_info = {
-      "id": office_id,
+      "id": len(offices) + 1,
       "name": office_name,
       "type": office_type
     }
@@ -21,7 +20,8 @@ def office_func():
     
     return make_response(jsonify({
       "Message": "Office Info Added",
-      "Status": "Ok"
+      "Status": "Ok",
+      "office_id": new_office_info['id'],
     }), 201)
   else:
     return Office.get_offices()
