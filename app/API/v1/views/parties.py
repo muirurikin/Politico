@@ -7,13 +7,12 @@ from app.API.v1.models.parties import Party, parties
 def party_func():
   if request.method == 'POST':
     party_data = request.get_json()
-    party_id = party_data['id']
     party_name = party_data['name']
     party_address = party_data['address']
     party_image = party_data['logo']
 
     new_party_info = {
-      "id": party_id,
+      "id": len(parties) + 1,
       "name": party_name,
       "address": party_address,
       "logo": party_image
@@ -23,7 +22,8 @@ def party_func():
     
     return make_response(jsonify({
       "Message": "Party Info Added",
-      "Status": "Ok"
+      "Status": "Ok",
+      "party_id": new_party_info['id']
     }), 201)
   else:
     return Party.get_parties()
@@ -42,7 +42,7 @@ def party_func_id(party_id):
     delete_party = [party for party in parties if party['id'] == party_id]
     parties.remove(delete_party[0])
     return make_response(jsonify({
-      "Meassage": "Party deleted",
+      "Message": "Party deleted",
       "Status": "ok"
     }), 200)
   else:
