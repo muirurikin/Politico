@@ -25,3 +25,7 @@ class Party:
     def get_party(party_id):
         party1 = [party for party in PARTIES if party['id'] == party_id]
         return party1
+    @staticmethod
+    def delete_party(party_id):
+        delete_party = [party for party in PARTIES if party['id'] == party_id]
+        PARTIES.remove(delete_party[0])
