@@ -12,8 +12,14 @@ class Party:
         '''Jsonify parties list'''
         return make_response(jsonify(PARTIES))
     @staticmethod
-    def create_party(new_party_info):
+    def create_party(party_name, party_address, party_image):
         '''Add new party to parties list'''
+        new_party_info = {
+            "id": len(PARTIES) + 1,
+            "name": party_name,
+            "address": party_address,
+            "logo": party_image
+        }
         PARTIES.append(new_party_info)
     @staticmethod
     def get_party(party_id):

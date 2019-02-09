@@ -13,19 +13,13 @@ def party_func():
         party_address = party_data['address']
         party_image = party_data['logo']
 
-        new_party_info = {
-            "id": len(PARTIES) + 1,
-            "name": party_name,
-            "address": party_address,
-            "logo": party_image
-        }
 
-        Party.create_party(new_party_info)
+        party_info = Party.create_party(party_name, party_address, party_image)
 
         return make_response(jsonify({
             "Message": "Party Info Added",
             "Status": "Ok",
-            "party_id": new_party_info['id']
+            "party_id": party_info['id']
         }), 201)
     
     return Party.get_parties()
