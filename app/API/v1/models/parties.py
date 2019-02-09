@@ -15,3 +15,7 @@ class Party:
     def create_party(new_party_info):
         '''Add new party to parties list'''
         PARTIES.append(new_party_info)
+    @staticmethod
+    def get_party(party_id):
+        party1 = [party for party in PARTIES if party['id'] == party_id]
+        return party1

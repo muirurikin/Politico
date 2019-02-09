@@ -49,6 +49,6 @@ def party_func_id(party_id):
             "Status": "ok"
         }), 200)
     else:
-        party1 = [party for party in PARTIES if party['id'] == party_id]
-        return make_response(jsonify(party1[0]))
+        result = Party.get_party(party_id)
+        return make_response(jsonify(result))
         
