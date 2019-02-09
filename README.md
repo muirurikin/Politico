@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/muirurikin/Politico.svg?branch=develop)](https://travis-ci.com/muirurikin/Politico)
+[![Build Status](https://travis-ci.com/muirurikin/Politico.svg?branch=develop)](https://travis-ci.com/muirurikin/Politico) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/391d9b03bd3f4f1da20d2f3a7218b603)](https://www.codacy.com/app/muirurikin/Politico?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=muirurikin/Politico&amp;utm_campaign=Badge_Grade)
 
 # Politico
 
