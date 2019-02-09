@@ -1,16 +1,17 @@
+'''Imports'''
 from flask import make_response, jsonify
 
-parties = []
+PARTIES = []
 
 class Party:
-  def __init__(self):
-    pass
-
-  @staticmethod
-  def get_parties():
-    return make_response(jsonify(parties))
-
-  @staticmethod
-  def create_party(new_party_info):
-    parties.append(new_party_info)
-    
+    '''Define Party Class'''
+    def __init__(self):
+        pass
+    @staticmethod
+    def get_parties():
+        '''Jsonify parties list'''
+        return make_response(jsonify(PARTIES))
+    @staticmethod
+    def create_party(new_party_info):
+        '''Add new party to parties list'''
+        PARTIES.append(new_party_info)
