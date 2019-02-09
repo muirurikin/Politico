@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/muirurikin/Politico.svg?branch=develop)](https://travis-ci.com/muirurikin/Politico) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/391d9b03bd3f4f1da20d2f3a7218b603)](https://www.codacy.com/app/muirurikin/Politico?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=muirurikin/Politico&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.com/muirurikin/Politico.svg?branch=develop)](https://travis-ci.com/muirurikin/Politico) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/391d9b03bd3f4f1da20d2f3a7218b603)](https://www.codacy.com/app/muirurikin/Politico?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=muirurikin/Politico&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/da7d677cc0d6b38cea63/maintainability)](https://codeclimate.com/github/muirurikin/Politico/maintainability) [![Coverage Status](https://coveralls.io/repos/github/muirurikin/Politico/badge.svg)](https://coveralls.io/github/muirurikin/Politico)
 
 # Politico
 
