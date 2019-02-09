@@ -23,5 +23,6 @@ class Office:
         return new_office_info
     @staticmethod
     def get_office(office_id):
+        '''Check offices list for specific office and return it'''
         office1 = [office for office in OFFICES if office['id'] == office_id]
         return office1
