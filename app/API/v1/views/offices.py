@@ -12,7 +12,7 @@ def office_func():
         office_name = office_data['name']
         office_type = office_data['type']
 
-        office_info = Office.create_office(office_name,office_type)
+        office_info = Office.create_office(office_name, office_type)
 
         return make_response(jsonify({
             "Message": "Office Info Added",
