@@ -28,6 +28,7 @@ class TestParty(unittest.TestCase):
   def test_getting_all_parties(self):
     res = self.client.get(path='/api/v1/parties', content_type='application/json')
     self.assertEqual(res.status_code, 200)
+    self.assertTrue(res.json, self.data)
 
   def test_post_party(self):
     res = self.post()
@@ -79,6 +80,7 @@ class TestOffice(unittest.TestCase):
   def test_getting_all_offices(self):
     res = self.client.get(path='/api/v1/offices', content_type='application/json')
     self.assertEqual(res.status_code, 200)
+    self.assertTrue(res.json, self.data)
 
   def test_post_office(self):
     res = self.post()
