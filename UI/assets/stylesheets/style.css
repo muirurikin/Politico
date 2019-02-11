@@ -247,7 +247,7 @@ footer {
 }
 #create-office h2 {
   margin-top: 100px;
-  color: #fff;
+  color: #112f41;
   font-size: 40px;
   font-weight: 300;
 }
@@ -353,12 +353,6 @@ input[type=submit] {
   padding: 12px 20px;
   border: none;
   float: right;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /*
