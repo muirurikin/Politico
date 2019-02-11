@@ -1,7 +1,7 @@
 """Imports"""
 from flask import jsonify, make_response, request
 from app.API.v1 import v1
-from app.API.v1.models.parties import Party
+from app.API.v1.models.parties import Party, PARTIES
 
 # Handle GET POST to /parties
 @v1.route('/parties', methods=['GET', 'POST'])
@@ -14,12 +14,12 @@ def party_func():
         party_image = party_data['logo']
 
 
-        result = Party.create_party(party_name, party_address, party_image)
+        party_info = Party.create_party(party_name, party_address, party_image)
 
         return make_response(jsonify({
             "Message": "Party Info Added",
             "Status": "Ok",
-            "party_id": result['id']
+            "party_id": party_info['id']
         }), 201)
     
     return Party.get_parties()

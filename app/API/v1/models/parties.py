@@ -21,6 +21,7 @@ class Party:
             "logo": party_image
         }
         PARTIES.append(new_party_info)
+        return new_party_info
     @staticmethod
     def get_party(party_id):
         party1 = [party for party in PARTIES if party['id'] == party_id]
