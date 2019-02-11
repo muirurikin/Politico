@@ -6,9 +6,9 @@ body {
   margin: 0;
 }
 
-/* 
+/*
 =============
-  Re-usable  
+  Re-usable
 =============
 */
 .container, .container-fluid {
@@ -28,9 +28,9 @@ h2 {
   padding: 0;
 }
 
-/* 
+/*
 ==========
-  Header 
+  Header
 ==========
 */
 header {
@@ -48,7 +48,7 @@ header li {
 }
 header nav {
   float: right;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 header nav a {
   border-bottom: 2px solid #fff;
@@ -60,9 +60,9 @@ header #logo {
 header #logo a img {
   height: 70px;
 }
-/* 
+/*
 =================
-  Dropdown Menu  
+  Dropdown Menu
 =================
 */
 .dropdown {
@@ -70,7 +70,7 @@ header #logo a img {
   overflow: hidden;
 }
 .dropdown .btn-drop {
-  font-size: 16px; 
+  font-size: 16px;
   border: none;
   border-bottom:  2px solid #fff;
   outline: none;
@@ -107,9 +107,9 @@ header #logo a img {
   display: block;
 }
 
-/* 
+/*
 =========
-  Jumbo  
+  Jumbo
 =========
 */
 #jumbo {
@@ -140,9 +140,9 @@ header #logo a img {
   border: 2px solid #fff;
   color: #000;
 }
-/* 
+/*
 =========
-  Story  
+  Story
 =========
 */
 #story {
@@ -157,15 +157,15 @@ header #logo a img {
   font-weight: 400;
 }
 
-/* 
+/*
 ============
-  Features 
+  Features
 ============
 */
 #features {
   background-color: #f2b134;
   padding-bottom: 20px;
-  color: #112f41; 
+  color: #112f41;
 }
 #features .feature {
   float: left;
@@ -177,9 +177,9 @@ header #logo a img {
   font-weight: 300;
 }
 
-/* 
+/*
 ==============
-  Politician 
+  Politician
 ==============
 */
 #politician {
@@ -191,7 +191,7 @@ header #logo a img {
 }
 #politician h2 {
   margin: 0;
-  padding-top: 10px; 
+  padding-top: 10px;
 
 }
 #politician h3 {
@@ -213,9 +213,9 @@ header #logo a img {
   border: 2px solid #fff;
   color: #000;
 }
-/* 
+/*
 ==========
-  Footer 
+  Footer
 ==========
 */
 footer {
@@ -225,15 +225,15 @@ footer {
   text-align: center;
 }
 
-/* 
+/*
 ======================
-  Admin User Pages  
+  Admin User Pages
 ======================
 */
 
-/* 
+/*
 ====================
-  CreateGovtOffice 
+  CreateGovtOffice
 ====================
 */
 #create-office {
@@ -242,7 +242,7 @@ footer {
   padding-bottom: 30px;
 }
 #create-office h2 {
-  margin-top: 100px; 
+  margin-top: 100px;
   color: #fff;
   font-size: 40px;
   font-weight: 300;
@@ -286,16 +286,16 @@ form .parties {
   background-color: #112f41;
   width: 100%;
   font-weight: 700;
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 /* Footer */
 .create {
   background-color: #112f41;
 }
 
-/* 
+/*
 ==========================
-  Create Political Party 
+  Create Political Party
 ==========================
 */
 #create-party {
@@ -304,7 +304,7 @@ form .parties {
   color: #112f41;
 }
 #create-party h2 {
-  margin-top: 100px; 
+  margin-top: 100px;
   color: #112f41;
 }
 form {
@@ -319,9 +319,9 @@ form input {
   margin: 0 auto;
 }
 
-/* 
+/*
 ========================
-  Edit Political Party  
+  Edit Political Party
 ========================
 */
 #edit-party {
@@ -355,9 +355,9 @@ input[type=submit] {
   clear: both;
 }
 
-/* 
+/*
 ==================
-  Delete A Party  
+  Delete A Party
 ==================
 */
 #delete-party {
@@ -369,7 +369,7 @@ input[type=submit] {
   margin-bottom: 20px;
 }
 #delete-party h2 {
-  margin-top: 100px; 
+  margin-top: 100px;
   color: #ed533b;
 }
 #delete-party input[type=submit] {
@@ -377,18 +377,18 @@ input[type=submit] {
   color: #fff;
 }
 
-/* 
+/*
 ===========
-  Runners  
+  Runners
 ===========
 */
 #runners .container {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-/* 
+/*
 ===========
-  Profile  
+  Profile
 ===========
 */
 /* Profile Card */
@@ -439,13 +439,13 @@ input[type=submit] {
   font-size: 14px;
 }
 
-/* 
+/*
 =================
   View Party
 =================
 */
 #view-parties {
-  padding: 20px 0; 
+  padding: 20px 0;
 }
 #view-parties .party {
   float: left;
@@ -479,13 +479,13 @@ input[type=submit] {
   border-bottom: none;
 }
 
-/* 
+/*
 ===========
   Vote
 ===========
 */
 #vote {
-  padding: 20px 0; 
+  padding: 20px 0;
 }
 #vote .runner-card {
   float: left;
@@ -505,7 +505,7 @@ input[type=submit] {
   font-weight: 700;
 }
 
-/* 
+/*
 ==============
   Running
 ==============
@@ -520,23 +520,21 @@ input[type=submit] {
   padding: 10px;
 }
 
-/* 
+/*
 ==============
-  Login Page 
+  Login Page
 ==============
 */
 #login {
-  background-color: #4fb99f;
   padding: 30px 0;
   height: 75vh;
-  color: #fff;
 }
 #login form {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
 }
 #login form .form-header {
-  background-color: #f2b134;
+  background-color: #112f41;
   height: 70px;
 }
 #login .form-header h3 {
@@ -560,16 +558,16 @@ input[type=submit] {
   width: inherit;
 }
 #login form button {
-  background-color: #f2b134;
+  background-color: #112f41;
   width: 100%;
   padding: 1em;
   color: #fff;
   font-weight: 700;
 }
 
-/* 
+/*
 ==============
-  Login Page 
+  Login Page
 ==============
 */
 #register {
