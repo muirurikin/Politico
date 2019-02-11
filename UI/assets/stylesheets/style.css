@@ -27,7 +27,12 @@ h2 {
   font-weight: 300;
   padding: 0;
 }
-
+button a {
+  color: #fff;
+}
+button a:hover {
+  color: #000;
+}
 /*
 ==========
   Header
@@ -146,9 +151,9 @@ header #logo a img {
 =========
 */
 #story {
-  background-color: #4fb99f;
+  background-color: #f4f4f4;
   padding-bottom: 20px;
-  color: #fff;
+  color: #000;
 }
 #story p {
   text-align: center;
@@ -163,7 +168,6 @@ header #logo a img {
 ============
 */
 #features {
-  background-color: #f2b134;
   padding-bottom: 20px;
   color: #112f41;
 }
