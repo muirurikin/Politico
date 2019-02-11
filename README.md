@@ -21,8 +21,8 @@ https://politico-alexona.herokuapp.com/api/v1/
 |---|---|---|     
 |GET| /api/v1/parties| Get all parties|
 |POST | /api/v1/parties  | Create a new party  |
-|GET| /api/v1/offices/  | Get all offices|
-|POST|	/api/v1/offices/  |	Create a new office  |
+|GET| /api/v1/offices  | Get all offices|
+|POST|	/api/v1/offices  |	Create a new office  |
 |GET| /api/v1/parties/ (party_id) | Get a specific party|
 |GET| /api/v1/offices/ (office_id) | Get a specific office|
 |PUT|	/api/v1/parties/(party_id) |	Update a specific partys details.|
