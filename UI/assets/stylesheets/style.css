@@ -241,7 +241,7 @@ footer {
 ====================
 */
 #create-office {
-  background: #ed533b;
+  /* background: #ed533b; */
   text-align: center;
   padding-bottom: 30px;
 }
@@ -254,6 +254,7 @@ footer {
 #create-office form {
   width: 40%;
   margin: 0 auto;
+  border: 2px solid #112f41;
 }
 #create-office form .form-header {
   background-color: #112f41;
@@ -273,6 +274,7 @@ form .input-container {
 form .field {
   padding: 10px 0;
   text-align: left;
+  border-bottom: 2px solid #112f41;
 }
 form .fa {
   font-size: 20px;
