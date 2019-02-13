@@ -1,7 +1,9 @@
 """Imports"""
 from flask import jsonify, make_response, request
 from app.API.v1 import v1
-from app.API.v1.models.parties import Party, PARTIES
+from app.API.v1.models.parties import Party as P, PARTIES
+from app.API.utils.validator import Validate as V
+
 
 # Handle GET POST to /parties
 @v1.route('/parties', methods=['GET', 'POST'])
@@ -13,16 +15,19 @@ def party_func():
         party_address = party_data['address']
         party_image = party_data['logo']
 
+        error_handle = V.validate_party(party_name, party_address, party_image)
+        if error_handle:
+            return error_handle
+        else:
+            party_info = P.create_party(party_name, party_address, party_image)
+            return make_response(jsonify({
+                "Message": "Party Info Added",
+                "Status": 201,
+                "party_id": party_info['id']
+            }), 201)
 
-        party_info = Party.create_party(party_name, party_address, party_image)
+    return P.get_parties()
 
-        return make_response(jsonify({
-            "Message": "Party Info Added",
-            "Status": "Ok",
-            "party_id": party_info['id']
-        }), 201)
-    
-    return Party.get_parties()
 
 # Handle GET PUT DELETE to /parties/party_id
 @v1.route('/parties/<int:party_id>', methods=['GET', 'PUT', 'DELETE'])
@@ -36,12 +41,11 @@ def party_func_id(party_id):
 
         return make_response(jsonify(party_info[0]))
     elif request.method == 'DELETE':
-        Party.delete_party(party_id)
+        P.delete_party(party_id)
         return make_response(jsonify({
             "Message": "Party deleted",
             "Status": "ok"
         }), 200)
     else:
-        result = Party.get_party(party_id)
+        result = P.get_party(party_id)
         return make_response(jsonify(result))
-        

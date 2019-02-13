@@ -3,6 +3,7 @@ from flask import jsonify, make_response, request
 from app.API.v1 import v1
 from app.API.v1.models.offices import Office
 
+
 # Handle GET POST to /offices
 @v1.route('/offices', methods=['GET', 'POST'])
 def office_func():
@@ -22,10 +23,10 @@ def office_func():
 
     return Office.get_offices()
 
+
 # Handle GET to /offices/office_id
 @v1.route('/offices/<int:office_id>', methods=['GET'])
 def get_office(office_id):
     """Handle requests in the methods list"""
     result = Office.get_office(office_id)
     return make_response(jsonify(result))
-
