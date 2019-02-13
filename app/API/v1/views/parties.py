@@ -48,4 +48,3 @@ def party_func_id(party_id):
                 "Message": "Not Found"
             }))
         return make_response(jsonify(result))
-        
