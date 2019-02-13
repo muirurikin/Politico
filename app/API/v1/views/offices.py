@@ -27,5 +27,9 @@ def office_func():
 def get_office(office_id):
     """Handle requests in the methods list"""
     result = Office.get_office(office_id)
+    if not result:
+        return make_response(jsonify({
+            "Message": "Not Found"
+        }))
     return make_response(jsonify(result))
 

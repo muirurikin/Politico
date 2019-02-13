@@ -43,5 +43,9 @@ def party_func_id(party_id):
         }), 200)
     else:
         result = Party.get_party(party_id)
+        if not result:
+            return make_response(jsonify({
+                "Message": "Not Found"
+            }))
         return make_response(jsonify(result))
         
