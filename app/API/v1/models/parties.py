@@ -1,5 +1,6 @@
 '''Imports'''
-from flask import make_response, jsonify
+from app.API.utils.responses import Response
+
 
 PARTIES = []
 
@@ -12,7 +13,8 @@ class Party:
     @staticmethod
     def get_parties():
         '''Jsonify parties list'''
-        return make_response(jsonify(PARTIES))
+        res = Response.on_success(PARTIES)
+        return res
 
     @staticmethod
     def create_party(party_name, party_address, party_image):
@@ -23,8 +25,13 @@ class Party:
             "address": party_address,
             "logo": party_image
         }
-        PARTIES.append(new_party_info)
-        return new_party_info
+        exists = [p for p in PARTIES if p['name'] == new_party_info['name']]
+        if not exists:
+            PARTIES.append(new_party_info)
+            return new_party_info
+        else:
+            resp = Response.on_bad_request(message='Party already exists')
+            return resp
 
     @staticmethod
     def get_party(party_id):
@@ -36,4 +43,10 @@ class Party:
     def delete_party(party_id):
         '''Get single party from parties list and delete it'''
         delete_party = [party for party in PARTIES if party['id'] == party_id]
-        PARTIES.remove(delete_party[0])
+        if delete_party:
+            deleted = PARTIES.remove(delete_party[0])
+            res = Response.on_delete()
+            return res
+        else:
+            res = Response.on_bad_request(message='Party does not exist')
+            return res
