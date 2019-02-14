@@ -1,5 +1,5 @@
 '''Imports'''
-from flask import make_response, jsonify
+from app.API.utils.responses import Response
 
 OFFICES = []
 
@@ -11,8 +11,8 @@ class Office:
 
     @staticmethod
     def get_offices():
-        '''Jsonify offices list'''
-        return make_response(jsonify(OFFICES))
+        res = Response.on_success(OFFICES)
+        return res
 
     @staticmethod
     def create_office(office_name, office_type):
@@ -22,8 +22,13 @@ class Office:
             "name": office_name,
             "type": office_type
         }
-        OFFICES.append(new_office_info)
-        return new_office_info
+        exists = [o for o in OFFICES if o['name'] == new_office_info['name']]
+        if not exists:
+            OFFICES.append(new_office_info)
+            return new_office_info
+        else:
+            resp = Response.on_bad_request(message='Office already exists')
+            return resp
 
     @staticmethod
     def get_office(office_id):

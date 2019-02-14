@@ -17,3 +17,17 @@ class Validate:
             message = 'Fill in a valid party details'
             res = Response.on_bad_request(message)
             return res
+
+    @staticmethod
+    def validate_office(office_name, office_type):
+        '''Check If party input data is valid'''
+        def len_checker(info):
+            return len(info.strip())
+        if len_checker(office_name) == 0 or len_checker(office_type) == 0:
+            message = "Fill all the required fields and try again."
+            res = Response.on_bad_request(message)
+            return res
+        elif not office_name.isalpha():
+            message = 'Fill in a valid office details'
+            res = Response.on_bad_request(message)
+            return res

@@ -34,6 +34,7 @@ class TestParty(unittest.TestCase):
     def test_post_party(self):
         res = self.post()
         self.assertTrue(res.json['message'])
+        self.assertTrue(res.json['status'])
 
     def test_get_party_by_id(self):
         res = self.post()
@@ -75,15 +76,14 @@ class TestOffice(unittest.TestCase):
 
     def test_post_office(self):
         res = self.post()
-        self.assertEqual(res.status_code, 201)
-        self.assertTrue(res.json['Message'], 'Office Info Added')
-        self.assertTrue(res.json['office_id'])
+        self.assertTrue(res.json['message'])
+        self.assertTrue(res.json['status'])
 
     def test_get_office_by_id(self):
         res = self.post()
         self.assertEqual(res.status_code, 201)
-        o_id = int(res.json['office_id'])
-        path = '/api/v1/offices/%d' % o_id
+        p_id = int(res.json['id'])
+        path = '/api/v1/offices/%d' % p_id
         resp = self.client.get(path, content_type='application/json')
         self.assertEqual(resp.status_code, 200)
 
