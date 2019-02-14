@@ -6,6 +6,11 @@ from app.API.utils.validator import Validate as V
 from app.API.utils.responses import Response
 
 
+@v1.route('/', methods=['GET'])
+def index():
+    return '<h1>Welcome To Politico</h1>'
+
+
 # Handle GET to /offices
 @v1.route('/offices', methods=['GET'])
 def get_offices():
