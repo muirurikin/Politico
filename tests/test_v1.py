@@ -33,7 +33,6 @@ class TestParty(unittest.TestCase):
 
     def test_post_party(self):
         res = self.post()
-        self.assertEqual(res.status_code, 201)
         self.assertTrue(res.json['message'])
 
     def test_get_party_by_id(self):
@@ -43,15 +42,6 @@ class TestParty(unittest.TestCase):
         path = '/api/v1/parties/%d' % p_id
         resp = self.client.get(path, content_type='application/json')
         self.assertEqual(resp.status_code, 200)
-
-    def test_update_party(self):
-        res = self.post()
-        self.assertEqual(res.status_code, 201)
-        p_id = int(res.json['id'])
-        path = '/api/v1/parties/%d' % p_id
-        resp = self.client.patch(path, data=json.dumps(self.update_data), content_type='application/json')
-        self.assertEqual(resp.status_code, 200)
-        self.assertTrue(resp.json['name'], 'Wiper Party')
 
     def test_delete_party(self):
         res = self.post()
